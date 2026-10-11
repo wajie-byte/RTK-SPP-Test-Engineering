@@ -23,6 +23,11 @@ Release/
 *.rar
 *.zip
 
+# RTKLIB 处理日志 (文件过大)
+LOG/
+*.trace
+*.stat
+
 # Python 缓存
 __pycache__/
 *.pyc
