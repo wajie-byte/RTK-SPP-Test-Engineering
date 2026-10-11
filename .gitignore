@@ -1,0 +1,29 @@
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+x64/
+Debug/
+Release/
+*.obj
+*.obj.enc
+*.ipch
+*.db
+*.vsidx
+
+# 编译输出
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+
+# 压缩包
+*.rar
+*.zip
+
+# 系统文件
+.DS_Store
+Thumbs.db
+.claude/

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BASE">
+      <UniqueIdentifier>{3a81491e-9ca7-4af5-ac2a-b2111189ff0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SPP">
+      <UniqueIdentifier>{18a218c7-3e57-4661-9823-1f246bed8b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RTK">
+      <UniqueIdentifier>{8d4252c4-9bba-4bbd-b31b-b5daa338aff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RealTime">
+      <UniqueIdentifier>{ac225e2c-40f1-4e2a-a03c-ffea8752447b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{edbf5850-126a-4cac-bb75-af28218e5a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{e02a48d1-caf6-457a-aad5-63bdfaecc314}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RTKDLL\MATDLL\Mat.cpp">
+      <Filter>BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\BASEDLL\Base.cpp">
+      <Filter>BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\RTKData\DataProcess.cpp">
+      <Filter>BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\RTKData\DefData.cpp">
+      <Filter>BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\OEMRead\BinRead.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\LAMBDA\lambda.cpp">
+      <Filter>RTK</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\RTKCAL\newRTK.cpp">
+      <Filter>RTK</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\RTKCAL\RTKSolution.cpp">
+      <Filter>RTK</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\SatePos\SatePVT.cpp">
+      <Filter>SPP</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\SatePos\SatePos.cpp">
+      <Filter>SPP</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\SPP\SPP.cpp">
+      <Filter>SPP</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\FileRead\RTKDataRead.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\RealTime\RealTime.cpp">
+      <Filter>RealTime</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\OEMRead\Parse.cpp">
+      <Filter>RealTime</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\SPP\newSPP.cpp">
+      <Filter>SPP</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\SPP\error_cal.cpp">
+      <Filter>SPP</Filter>
+    </ClCompile>
+    <ClCompile Include="RTKDLL\Config\config.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RTKDLL\MATDLL\Mat.h">
+      <Filter>BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\BASEDLL\Base.h">
+      <Filter>BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RTKData\DataProcess.h">
+      <Filter>BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RTKData\DefData.h">
+      <Filter>BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\OEMRead\BinRead.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\LAMBDA\lambda.h">
+      <Filter>RTK</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RTKCAL\newRTK.h">
+      <Filter>RTK</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RTKCAL\RTKSoution.h">
+      <Filter>RTK</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\SatePos\SatePVT.h">
+      <Filter>SPP</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\SatePos\SatePos.h">
+      <Filter>SPP</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\SPP\SPP.h">
+      <Filter>SPP</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\FileRead\RTKDataRead.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RealTime\sockets.h">
+      <Filter>RealTime</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\RealTime\RealTime.h">
+      <Filter>RealTime</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\OEMRead\Parse.h">
+      <Filter>RealTime</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\SPP\newSPP.h">
+      <Filter>SPP</Filter>
+    </ClInclude>
+    <ClInclude Include="RTKDLL\Config\config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
