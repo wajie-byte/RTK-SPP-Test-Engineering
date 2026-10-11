@@ -1,0 +1,80 @@
+# 测试开发实践 - CI/CD 持续集成流水线
+# 对应 JD 要求 #6: 了解 CI/CD 基本概念和常见流程
+
+name: RTK CI Pipeline
+
+# 触发条件：每次 push 到 main/develop 时运行
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ========== Job 1: 单元测试 ==========
+  unit-test:
+    name: 单元测试 (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: 安装依赖
+        run: pip install numpy pytest pytest-cov
+
+      - name: 运行矩阵运算测试
+        run: pytest tests/test_matrix.py -v
+
+      - name: 运行数据读取测试
+        run: pytest tests/test_data_reader.py -v
+
+      - name: 运行 SPP 算法测试
+        run: pytest tests/test_spp.py -v
+
+      - name: 生成覆盖率报告
+        run: pytest tests/ --cov=src --cov-report=term-missing
+
+  # ========== Job 2: 集成测试 (依赖单元测试通过) ==========
+  integration-test:
+    name: 集成测试
+    needs: unit-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: pip install numpy pytest
+
+      - name: 运行集成测试
+        run: pytest tests/integration/ -v
+
+  # ========== Job 3: 代码质量 ==========
+  code-quality:
+    name: 代码质量检查
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: Python 语法检查
+        run: |
+          pip install flake8
+          flake8 src/ tests/ --max-line-length=120 --ignore=E402,W503
